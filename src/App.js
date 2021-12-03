@@ -3,7 +3,6 @@ import './App.css';
 import CreateArray from './sortingComponent/array';
 
 class App extends Component {
-
   render(){ 
     return (
       <div>

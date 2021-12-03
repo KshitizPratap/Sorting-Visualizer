@@ -135,7 +135,7 @@ class Array extends Component {
 
     componentDidMount(){
         this.createArray(90);
-
+      console.log("[componentDidMount]")
     }
     render(){
         return(
