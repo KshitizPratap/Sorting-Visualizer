@@ -140,7 +140,7 @@ class Array extends Component {
     render(){
         return(
           
-          <div>
+          <div className="MainContainer">
             {/* ------ Heading of page------ */}
             <div className="nav">
               <img className = "logo" src = {Logo} alt = "logo"/>
