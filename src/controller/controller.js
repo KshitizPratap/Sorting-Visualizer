@@ -8,13 +8,15 @@ const controller = (props) => {
             <label className="Clabel">Size</label>
             <input type="range" 
                     min="50" max="220" 
+                    defaultValue={130}
                     onChange = {props.sizeChanger}/>
         </div>
 
         <div className = "temp">
             <label className="Clabel">Speed</label>
             <input type="range"
-                min="2" max="20" 
+                min="2" max="20"
+                defaultValue={10} 
                 onChange = {props.speedChanger}/>
         </div>
 

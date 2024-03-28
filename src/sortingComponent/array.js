@@ -8,11 +8,11 @@ import Logo from './logo.png'
 
 class Array extends Component {
     state = {
-        arr : [],
+        arr : [10, 15, 20, 30],
         elementColor : ['#66FF66'],
         hardReset : false,
-        size : 90,
-        speed : 20
+        size : 130,
+        speed : 10
     }
 
     sizechange =(t) => {
@@ -31,14 +31,14 @@ class Array extends Component {
     createArray = (size) => {
         const array = [];
         
-        for(let i=0; i<=size;i++)
+        for(let i=0; i<=size; i++)
         {
           if(i === 45){
             continue;
           }
           array.push(Math.floor(Math.random()*400));
         }
-        array[45] = 400;
+        array[75] = 400;
         array[5] = 400;
         this.setState({arr : array});
     }
@@ -85,6 +85,7 @@ class Array extends Component {
       for(let i=0; i<anime.length; i++){
 
         let bars = document.getElementsByClassName('arrayElement');
+        console.log(bars);
         let color = count%2 === 0 ? 'red' : this.state.elementColor;
         let [a, b] = anime[i]
         let bar1 = bars[a].style;
@@ -108,8 +109,9 @@ class Array extends Component {
     
     heapMain = (array) => {
       const anime = heapsort(array)
-      console.log(anime)
+
       let count = 0;
+
       for(let i=0; i<anime.length; i++){
         let bars = document.getElementsByClassName('arrayElement');
           let color = count%2 === 0 ? 'red' : this.state.elementColor;
@@ -134,9 +136,9 @@ class Array extends Component {
     }
 
     componentDidMount(){
-        this.createArray(90);
-      console.log("[componentDidMount]")
+        this.createArray(130);
     }
+
     render(){
         return(
           
@@ -191,4 +193,3 @@ class Array extends Component {
 };
 
 export default Array;
-
